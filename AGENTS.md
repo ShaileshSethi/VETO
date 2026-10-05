@@ -42,6 +42,11 @@ Before a wider PC action, get the user's approval through **Veto's own action pr
 - Inspect status and staged files before committing/pushing. Keep `.env`, local database/data, evidence screenshots and installed/build dependencies excluded. Never force-push or overwrite existing remote history to resolve a conflict.
 - Record what actually shipped and preserve the pending live NVIDIA gate. Mock-mode commits are development evidence, not live-inference qualification.
 
+## Code quality preference (owner request, 5 October 2026)
+
+- Follow `ENGINEERING_STANDARDS.md`: readable modules, strict interface types, explanatory safety comments/docstrings, reproducible dependencies and meaningful regression checks.
+- Run `check-veto.ps1` before publishing code changes, and verify the affected flow in the browser. Report unresolved warnings and live-testing gaps honestly; do not promise evaluation marks.
+
 ## If blocked
 
 Report the exact blocker and its effect. Continue with independent work. Do not fake a passed test, change the required NVIDIA/Nebius runtime into another provider, silently weaken a safety rule, or leave a purported working demo that only replays canned responses. If a key or sign-in is needed, give local setup steps; never request the secret value in chat.

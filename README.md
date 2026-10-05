@@ -104,3 +104,7 @@ Use [Blinky](https://github.com/KingSahil/Blinky) as a design reference for a co
 There are **25 calendar days from Oct 4 through Oct 28**, including an intended two-day submission buffer before the official Oct 30 deadline. With the wake word and spoken replies included, expect roughly **55–80 focused hours** across setup, coding with Codex, hands-on testing, deployment, and video. This is an estimate, not a promise. If you start late, use the priority order in the implementation plan; a reliable file-action, memory, and voice demo matters more than extra integrations.
 
 The app must never be tested first on your personal documents. Start with generated sample files in a dedicated test folder. The real user grants specific folders later.
+
+## Code quality checks
+
+From this project folder in PowerShell, run `.\check-veto.ps1 -Install` once, then `.\check-veto.ps1` after edits. It checks formatting, lint, strict TypeScript, Windows sample tests and the production build. See [ENGINEERING_STANDARDS.md](ENGINEERING_STANDARDS.md) for review and comment rules. GitHub Actions also runs these checks; live NVIDIA testing remains a separate pending gate.

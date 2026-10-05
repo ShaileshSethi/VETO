@@ -110,3 +110,12 @@ Validate these with real users privately. No interviews or credits are claimed a
 - Wake-word and speech implementation that works acceptably on the user's machine, with measured false wakes/CPU and clear local/cloud audio boundaries.
 - Reliable, affordable hosting for a sample-only judge demo; actual Windows build packaging.
 - Whether email OAuth and screen help fit after core gates pass.
+
+## Session: code readability and quality checks - 5 October 2026
+
+- Owner requested clean, commented code suitable for evaluation. Split React into App, ChatPanel, FilesPanel, shared API transport and API types; formatted Python, TSX, CSS and configuration. Added safety docstrings/comments explaining approval binding, metadata identity, write-ahead receipts and request boundaries.
+- Fixed the initial mode banner to show loading until backend status is known. Added abort/cleanup for receipt polling, explicit button types, table headers and actionable non-JSON API errors.
+- Installed project development tools Ruff 0.16.10 and Biome 2.5.15; inspected their installed MIT / MIT-or-Apache license files. Added pinned development requirements, lint/format settings, strict TypeScript unused-code checks, check-veto.ps1, Windows GitHub Actions and ENGINEERING_STANDARDS.md.
+- check-veto.ps1 passed Python lint/formatting, **48 Windows tests** (6.94 seconds), TypeScript/Biome and Vite production build (32 modules). Initial sandbox pytest run failed at temporary-directory permissions; rerun outside sandbox passed without changing Windows settings. One existing Starlette TestClient/httpx deprecation warning remains, unsuppressed.
+- Browser verification: labelled mock chat answered; saved permissions/preferences/history rendered; exact undo preview showed 4 moves / 327 bytes; cancellation showed CANCELLED / zero executed steps. No file moves approved in this session. Browser warning/error log empty. Screenshot evidence stays in ignored data/quality-preview.jpg.
+- Live NVIDIA/Nebius inference remains **pending**. This quality checkpoint does not complete M1 or start the next milestone. Remote CI results require separate verification after publishing.
