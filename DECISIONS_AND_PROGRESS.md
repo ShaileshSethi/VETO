@@ -9,7 +9,7 @@ Codex and the owner update this file after every working session. Record facts, 
 - **Current milestone:** sample M2 development authorized while M1 live acceptance remains incomplete
 - **Next exact task:** launch `run-veto.ps1 -Mode mock` and try permission → preview → approve → restart → undo on generated samples.
 - **Actual focused hours:** approximately 0.5 agent hours across two sessions; owner time not measured
-- **Last verified working commit:** `5c7a71a` — sample-development checkpoint only; live NVIDIA milestone remains incomplete
+- **Last verified working commit:** `fc814da` — sample-development checkpoint only; live NVIDIA milestone remains incomplete
 
 ## Decisions
 
@@ -119,3 +119,5 @@ Validate these with real users privately. No interviews or credits are claimed a
 - check-veto.ps1 passed Python lint/formatting, **48 Windows tests** (6.94 seconds), TypeScript/Biome and Vite production build (32 modules). Initial sandbox pytest run failed at temporary-directory permissions; rerun outside sandbox passed without changing Windows settings. One existing Starlette TestClient/httpx deprecation warning remains, unsuppressed.
 - Browser verification: labelled mock chat answered; saved permissions/preferences/history rendered; exact undo preview showed 4 moves / 327 bytes; cancellation showed CANCELLED / zero executed steps. No file moves approved in this session. Browser warning/error log empty. Screenshot evidence stays in ignored data/quality-preview.jpg.
 - Live NVIDIA/Nebius inference remains **pending**. This quality checkpoint does not complete M1 or start the next milestone. Remote CI results require separate verification after publishing.
+
+- Published code-quality commits: `4e597df` (readable modules/safety comments) and `fc814da` (quality tooling/standards). Verified origin/main is fc814da9fb1b8a15b43810edbde1299b043ffb60 after pushing. GitHub Windows Actions was in progress at verification; remote pass not yet claimed. Local app stopped after browser checks; existing sample file locations/preferences retained.
