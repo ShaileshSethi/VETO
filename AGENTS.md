@@ -35,6 +35,13 @@ Before a wider PC action, get the user's approval through **Veto's own action pr
 5. Update README/setup, progress, decisions, and any changed assumptions. Make a git commit when the gate passes.
 6. Tell the owner exactly what to click/type to verify; stop before the next milestone.
 
+## Git workflow preference (owner request, 5 October 2026)
+
+- Use multiple focused commits for meaningful implementation and documentation changes; do not create empty commits just to increase the count.
+- The owner requested GitHub pushes to `https://github.com/ShaileshSethi/VETO.git`. The configured `origin` uses this URL and the published branch is `main`.
+- Inspect status and staged files before committing/pushing. Keep `.env`, local database/data, evidence screenshots and installed/build dependencies excluded. Never force-push or overwrite existing remote history to resolve a conflict.
+- Record what actually shipped and preserve the pending live NVIDIA gate. Mock-mode commits are development evidence, not live-inference qualification.
+
 ## If blocked
 
 Report the exact blocker and its effect. Continue with independent work. Do not fake a passed test, change the required NVIDIA/Nebius runtime into another provider, silently weaken a safety rule, or leave a purported working demo that only replays canned responses. If a key or sign-in is needed, give local setup steps; never request the secret value in chat.

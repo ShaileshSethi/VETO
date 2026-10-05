@@ -42,6 +42,15 @@ Codex and the owner update this file after every working session. Record facts, 
 
 ## Session template (copy below each time)
 
+### 2026-10-05 — Owner-authorized GitHub push
+
+- **Request:** owner asked for multiple commits and pushes to `https://github.com/ShaileshSethi/VETO.git`.
+- **Checks:** working tree was clean, two focused commits existed (`5c7a71a` implementation; `9a194bd` checkpoint documentation). Remote `ls-remote --symref` succeeded and returned no refs, confirming an empty repository at that check. Sandbox networking initially failed; permitted retry succeeded.
+- **Actual result:** configured `origin` to the requested URL and ran `git push -u origin HEAD:main`. Git reported a new `main` branch and tracking from local `codex/m0-local-shell` to `origin/main`. Both existing commits were pushed without force or remote history replacement.
+- **Exclusions verified:** no tracked `.env`, data/SQLite/sample files, evidence screenshots, node_modules or compiled UI. Blank `.env.example` and fixture generator/tests are included.
+- **Follow-up:** updated README repository link and recorded the owner's focused-commit workflow in AGENTS.md as a separate documentation change, to be committed and pushed in this session.
+- **Milestones:** no code behavior changed in this publication step; **live NVIDIA/Nebius testing and M1 remain pending**. Previously recorded 48 passing tests/build/browser trial apply to the code checkpoint; no new live test is claimed.
+
 ### 2026-10-05 — Explicit mock mode and sample M2 development
 
 - **Authorization:** owner says credits arrive in a few days and requests labelled sample replies plus fixture permissions/sorting/approval/undo/preferences. This is a development exception to the earlier sequence, not an alternative hackathon runtime.

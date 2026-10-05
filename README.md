@@ -77,7 +77,7 @@ UI and API share **one loopback server**, with no CORS access for other websites
 
 **Try this sample-only development gate.** On 5 October, the owner explicitly authorized mock mode and sample M2 work while credits are pending, overriding the original strict milestone sequence. Automated checks and the browser sort → process restart → approved undo trial passed. All five original sample files were verified byte-for-byte afterward. The test grant was revoked for handoff; the saved Notes preference and receipts remain as demonstration evidence. Full M0 account/user research checks remain pending; **M1 remains incomplete and live NVIDIA testing is pending**. M2 personal access and wider features are not enabled. See [DECISIONS_AND_PROGRESS.md](DECISIONS_AND_PROGRESS.md).
 
-The source has an MIT license; see [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Keep this repository local/private while developing. No remote repository was created or published.
+The source has an MIT license; see [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The owner-authorized source repository is [ShaileshSethi/VETO on GitHub](https://github.com/ShaileshSethi/VETO), with commits pushed to `main`. API keys, local SQLite state, generated sample files, screenshots, dependencies and compiled UI are ignored and excluded from the source repository.
 
 ## Which file answers which question?
 
