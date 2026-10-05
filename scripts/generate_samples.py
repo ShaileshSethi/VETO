@@ -1,4 +1,5 @@
 """Create expendable fixtures only. Re-running preserves every existing file."""
+
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,7 +14,7 @@ SAMPLES = {
 
 def is_link_or_reparse(path: Path) -> bool:
     try:
-        attributes = getattr(path.lstat(), 'st_file_attributes', 0)
+        attributes = getattr(path.lstat(), "st_file_attributes", 0)
     except FileNotFoundError:
         attributes = 0
     return path.is_symlink() or bool(attributes & 0x400)
@@ -32,10 +33,12 @@ def generate(project_root: Path = ROOT) -> int:
         destination = target / name
         # Restarting after sorting must not recreate original paths and break undo.
         moved = False
-        for category in ('Documents', 'Notes', 'Images', 'Data'):
+        for category in ("Documents", "Notes", "Images", "Data"):
             folder = target / category
             if is_link_or_reparse(folder):
-                raise RuntimeError('Refusing sample generation through a linked output folder.')
+                raise RuntimeError(
+                    "Refusing sample generation through a linked output folder."
+                )
             if (folder / name).exists():
                 moved = True
                 break
@@ -51,4 +54,6 @@ def generate(project_root: Path = ROOT) -> int:
 
 
 if __name__ == "__main__":
-    print(f"Created {generate()} new sample files in data/demo/Veto Demo Inbox; existing files preserved.")
+    print(
+        f"Created {generate()} new sample files in data/demo/Veto Demo Inbox; existing files preserved."
+    )
